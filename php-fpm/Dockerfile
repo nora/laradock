@@ -479,7 +479,7 @@ USER root
 ARG INSTALL_IMAGE_OPTIMIZERS=false
 
 RUN if [ ${INSTALL_IMAGE_OPTIMIZERS} = true ]; then \
-    apt-get install -y jpegoptim optipng pngquant gifsicle \
+    apt-get update && apt-get install -y jpegoptim optipng pngquant gifsicle \
 ;fi
 
 ###########################################################################
